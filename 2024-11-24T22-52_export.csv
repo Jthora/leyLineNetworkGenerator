@@ -1,0 +1,6 @@
+﻿Configuration,Nodes,Ley Lines,Success Rate,Status
+Tetrahedron,4,0,0.0%,⚠️ No connections
+Octahedron,6,0,0.0%,⚠️ No connections
+Cube,8,0,0.0%,⚠️ No connections
+Dodecahedron,12,6,50.0%,✅ Success
+Icosahedron,12,0,0.0%,⚠️ No connections

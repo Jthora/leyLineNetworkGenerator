@@ -1,0 +1,774 @@
+[
+  {
+    "configuration": {
+      "solid_type": "tetrahedron",
+      "radius": 6371.0,
+      "max_distance": 5000.0,
+      "auto_adjust_enabled": true
+    },
+    "data": {
+      "nodes": [
+        {
+          "id": "node_000",
+          "coordinates": {
+            "latitude": 35.26438968275466,
+            "longitude": 45.0
+          },
+          "category": "major_node",
+          "associated_ley_lines": [],
+          "nearby_nodes": []
+        },
+        {
+          "id": "node_001",
+          "coordinates": {
+            "latitude": 35.26438968275466,
+            "longitude": -135.0
+          },
+          "category": "major_node",
+          "associated_ley_lines": [],
+          "nearby_nodes": []
+        },
+        {
+          "id": "node_002",
+          "coordinates": {
+            "latitude": -35.26438968275466,
+            "longitude": 135.0
+          },
+          "category": "major_node",
+          "associated_ley_lines": [],
+          "nearby_nodes": []
+        },
+        {
+          "id": "node_003",
+          "coordinates": {
+            "latitude": -35.26438968275466,
+            "longitude": -45.0
+          },
+          "category": "major_node",
+          "associated_ley_lines": [],
+          "nearby_nodes": []
+        }
+      ],
+      "ley_lines": [],
+      "metadata": {
+        "original_max_distance": 5000.0,
+        "suggested_parameters": {
+          "min_distance": 9738.115478513997,
+          "max_distance": 18258.966522213745,
+          "median_distance": 12172.644348142496,
+          "message": "Suggested parameters based on node distribution:\nMinimum distance: 9738.12 km\nMaximum distance: 18258.97 km\nMedian distance: 12172.64 km"
+        },
+        "adjustments_made": [],
+        "connection_stats": {
+          "attempted": 6,
+          "successful": 0
+        },
+        "parameter_adjustments": {
+          "original_max_distance": 5000.0,
+          "suggested_max_distance": 18258.966522213745,
+          "suggested_min_distance": 9738.115478513997,
+          "auto_adjust_enabled": true,
+          "final_max_distance": 5000.0
+        }
+      }
+    },
+    "validation": {
+      "nodes_valid": true,
+      "nodes_message": "Node positions are valid.",
+      "connections_valid": true,
+      "connections_message": "All 0 connections are within maximum distance.",
+      "parameter_suggestions": {
+        "min_distance": 9738.115478513997,
+        "max_distance": 18258.966522213745,
+        "median_distance": 12172.644348142496,
+        "message": "Suggested parameters based on node distribution:\nMinimum distance: 9738.12 km\nMaximum distance: 18258.97 km\nMedian distance: 12172.64 km"
+      }
+    },
+    "statistics": {
+      "total_nodes": 4,
+      "total_ley_lines": 0,
+      "primary_ley_lines": 0
+    }
+  },
+  {
+    "configuration": {
+      "solid_type": "octahedron",
+      "radius": 6371.0,
+      "max_distance": 5000.0,
+      "auto_adjust_enabled": true
+    },
+    "data": {
+      "nodes": [
+        {
+          "id": "node_000",
+          "coordinates": {
+            "latitude": 0.0,
+            "longitude": 0.0
+          },
+          "category": "major_node",
+          "associated_ley_lines": [],
+          "nearby_nodes": []
+        },
+        {
+          "id": "node_001",
+          "coordinates": {
+            "latitude": 0.0,
+            "longitude": 180.0
+          },
+          "category": "major_node",
+          "associated_ley_lines": [],
+          "nearby_nodes": []
+        },
+        {
+          "id": "node_002",
+          "coordinates": {
+            "latitude": 0.0,
+            "longitude": 90.0
+          },
+          "category": "major_node",
+          "associated_ley_lines": [],
+          "nearby_nodes": []
+        },
+        {
+          "id": "node_003",
+          "coordinates": {
+            "latitude": 0.0,
+            "longitude": -90.0
+          },
+          "category": "major_node",
+          "associated_ley_lines": [],
+          "nearby_nodes": []
+        },
+        {
+          "id": "node_004",
+          "coordinates": {
+            "latitude": 90.0,
+            "longitude": 0.0
+          },
+          "category": "major_node",
+          "associated_ley_lines": [],
+          "nearby_nodes": []
+        },
+        {
+          "id": "node_005",
+          "coordinates": {
+            "latitude": -90.0,
+            "longitude": 0.0
+          },
+          "category": "major_node",
+          "associated_ley_lines": [],
+          "nearby_nodes": []
+        }
+      ],
+      "ley_lines": [],
+      "metadata": {
+        "original_max_distance": 5000.0,
+        "suggested_parameters": {
+          "min_distance": 8006.034718408229,
+          "max_distance": 15011.31509701543,
+          "median_distance": 10007.543398010286,
+          "message": "Suggested parameters based on node distribution:\nMinimum distance: 8006.03 km\nMaximum distance: 15011.32 km\nMedian distance: 10007.54 km"
+        },
+        "adjustments_made": [],
+        "connection_stats": {
+          "attempted": 15,
+          "successful": 0
+        },
+        "parameter_adjustments": {
+          "original_max_distance": 5000.0,
+          "suggested_max_distance": 15011.31509701543,
+          "suggested_min_distance": 8006.034718408229,
+          "auto_adjust_enabled": true,
+          "final_max_distance": 5000.0
+        }
+      }
+    },
+    "validation": {
+      "nodes_valid": true,
+      "nodes_message": "Node positions are valid.",
+      "connections_valid": true,
+      "connections_message": "All 0 connections are within maximum distance.",
+      "parameter_suggestions": {
+        "min_distance": 8006.034718408229,
+        "max_distance": 15011.31509701543,
+        "median_distance": 10007.543398010286,
+        "message": "Suggested parameters based on node distribution:\nMinimum distance: 8006.03 km\nMaximum distance: 15011.32 km\nMedian distance: 10007.54 km"
+      }
+    },
+    "statistics": {
+      "total_nodes": 6,
+      "total_ley_lines": 0,
+      "primary_ley_lines": 0
+    }
+  },
+  {
+    "configuration": {
+      "solid_type": "cube",
+      "radius": 6371.0,
+      "max_distance": 5000.0,
+      "auto_adjust_enabled": true
+    },
+    "data": {
+      "nodes": [
+        {
+          "id": "node_000",
+          "coordinates": {
+            "latitude": 35.26438968275466,
+            "longitude": 45.0
+          },
+          "category": "major_node",
+          "associated_ley_lines": [],
+          "nearby_nodes": []
+        },
+        {
+          "id": "node_001",
+          "coordinates": {
+            "latitude": -35.26438968275466,
+            "longitude": 45.0
+          },
+          "category": "major_node",
+          "associated_ley_lines": [],
+          "nearby_nodes": []
+        },
+        {
+          "id": "node_002",
+          "coordinates": {
+            "latitude": 35.26438968275466,
+            "longitude": -45.0
+          },
+          "category": "major_node",
+          "associated_ley_lines": [],
+          "nearby_nodes": []
+        },
+        {
+          "id": "node_003",
+          "coordinates": {
+            "latitude": -35.26438968275466,
+            "longitude": -45.0
+          },
+          "category": "major_node",
+          "associated_ley_lines": [],
+          "nearby_nodes": []
+        },
+        {
+          "id": "node_004",
+          "coordinates": {
+            "latitude": 35.26438968275466,
+            "longitude": 135.0
+          },
+          "category": "major_node",
+          "associated_ley_lines": [],
+          "nearby_nodes": []
+        },
+        {
+          "id": "node_005",
+          "coordinates": {
+            "latitude": -35.26438968275466,
+            "longitude": 135.0
+          },
+          "category": "major_node",
+          "associated_ley_lines": [],
+          "nearby_nodes": []
+        },
+        {
+          "id": "node_006",
+          "coordinates": {
+            "latitude": 35.26438968275466,
+            "longitude": -135.0
+          },
+          "category": "major_node",
+          "associated_ley_lines": [],
+          "nearby_nodes": []
+        },
+        {
+          "id": "node_007",
+          "coordinates": {
+            "latitude": -35.26438968275466,
+            "longitude": -135.0
+          },
+          "category": "major_node",
+          "associated_ley_lines": [],
+          "nearby_nodes": []
+        }
+      ],
+      "ley_lines": [],
+      "metadata": {
+        "original_max_distance": 5000.0,
+        "suggested_parameters": {
+          "min_distance": 6273.95395830246,
+          "max_distance": 18258.966522213745,
+          "median_distance": 12172.644348142496,
+          "message": "Suggested parameters based on node distribution:\nMinimum distance: 6273.95 km\nMaximum distance: 18258.97 km\nMedian distance: 12172.64 km"
+        },
+        "adjustments_made": [],
+        "connection_stats": {
+          "attempted": 28,
+          "successful": 0
+        },
+        "parameter_adjustments": {
+          "original_max_distance": 5000.0,
+          "suggested_max_distance": 18258.966522213745,
+          "suggested_min_distance": 6273.95395830246,
+          "auto_adjust_enabled": true,
+          "final_max_distance": 5000.0
+        }
+      }
+    },
+    "validation": {
+      "nodes_valid": true,
+      "nodes_message": "Node positions are valid.",
+      "connections_valid": true,
+      "connections_message": "All 0 connections are within maximum distance.",
+      "parameter_suggestions": {
+        "min_distance": 6273.95395830246,
+        "max_distance": 18258.966522213745,
+        "median_distance": 12172.644348142496,
+        "message": "Suggested parameters based on node distribution:\nMinimum distance: 6273.95 km\nMaximum distance: 18258.97 km\nMedian distance: 12172.64 km"
+      }
+    },
+    "statistics": {
+      "total_nodes": 8,
+      "total_ley_lines": 0,
+      "primary_ley_lines": 0
+    }
+  },
+  {
+    "configuration": {
+      "solid_type": "dodecahedron",
+      "radius": 6371.0,
+      "max_distance": 5000.0,
+      "auto_adjust_enabled": true
+    },
+    "data": {
+      "nodes": [
+        {
+          "id": "node_000",
+          "coordinates": {
+            "latitude": -69.09484255211072,
+            "longitude": -90.0
+          },
+          "category": "major_node",
+          "associated_ley_lines": [
+            "leyline_000"
+          ],
+          "nearby_nodes": [
+            "node_006"
+          ]
+        },
+        {
+          "id": "node_001",
+          "coordinates": {
+            "latitude": 0.0,
+            "longitude": -110.90515744788931
+          },
+          "category": "major_node",
+          "associated_ley_lines": [
+            "leyline_001"
+          ],
+          "nearby_nodes": [
+            "node_007"
+          ]
+        },
+        {
+          "id": "node_002",
+          "coordinates": {
+            "latitude": -20.905157447889298,
+            "longitude": 180.0
+          },
+          "category": "major_node",
+          "associated_ley_lines": [
+            "leyline_002"
+          ],
+          "nearby_nodes": [
+            "node_005"
+          ]
+        },
+        {
+          "id": "node_003",
+          "coordinates": {
+            "latitude": 69.09484255211072,
+            "longitude": -90.0
+          },
+          "category": "major_node",
+          "associated_ley_lines": [
+            "leyline_003"
+          ],
+          "nearby_nodes": [
+            "node_009"
+          ]
+        },
+        {
+          "id": "node_004",
+          "coordinates": {
+            "latitude": 0.0,
+            "longitude": 110.90515744788931
+          },
+          "category": "major_node",
+          "associated_ley_lines": [
+            "leyline_004"
+          ],
+          "nearby_nodes": [
+            "node_010"
+          ]
+        },
+        {
+          "id": "node_005",
+          "coordinates": {
+            "latitude": 20.905157447889298,
+            "longitude": 180.0
+          },
+          "category": "major_node",
+          "associated_ley_lines": [
+            "leyline_002"
+          ],
+          "nearby_nodes": [
+            "node_002"
+          ]
+        },
+        {
+          "id": "node_006",
+          "coordinates": {
+            "latitude": -69.09484255211072,
+            "longitude": 90.0
+          },
+          "category": "major_node",
+          "associated_ley_lines": [
+            "leyline_000"
+          ],
+          "nearby_nodes": [
+            "node_000"
+          ]
+        },
+        {
+          "id": "node_007",
+          "coordinates": {
+            "latitude": 0.0,
+            "longitude": -69.0948425521107
+          },
+          "category": "major_node",
+          "associated_ley_lines": [
+            "leyline_001"
+          ],
+          "nearby_nodes": [
+            "node_001"
+          ]
+        },
+        {
+          "id": "node_008",
+          "coordinates": {
+            "latitude": -20.905157447889298,
+            "longitude": 0.0
+          },
+          "category": "major_node",
+          "associated_ley_lines": [
+            "leyline_005"
+          ],
+          "nearby_nodes": [
+            "node_011"
+          ]
+        },
+        {
+          "id": "node_009",
+          "coordinates": {
+            "latitude": 69.09484255211072,
+            "longitude": 90.0
+          },
+          "category": "major_node",
+          "associated_ley_lines": [
+            "leyline_003"
+          ],
+          "nearby_nodes": [
+            "node_003"
+          ]
+        },
+        {
+          "id": "node_010",
+          "coordinates": {
+            "latitude": 0.0,
+            "longitude": 69.0948425521107
+          },
+          "category": "major_node",
+          "associated_ley_lines": [
+            "leyline_004"
+          ],
+          "nearby_nodes": [
+            "node_004"
+          ]
+        },
+        {
+          "id": "node_011",
+          "coordinates": {
+            "latitude": 20.905157447889298,
+            "longitude": 0.0
+          },
+          "category": "major_node",
+          "associated_ley_lines": [
+            "leyline_005"
+          ],
+          "nearby_nodes": [
+            "node_008"
+          ]
+        }
+      ],
+      "ley_lines": [
+        {
+          "id": "leyline_000",
+          "nodes": [
+            "node_000",
+            "node_006"
+          ],
+          "category": "primary"
+        },
+        {
+          "id": "leyline_001",
+          "nodes": [
+            "node_001",
+            "node_007"
+          ],
+          "category": "primary"
+        },
+        {
+          "id": "leyline_002",
+          "nodes": [
+            "node_002",
+            "node_005"
+          ],
+          "category": "primary"
+        },
+        {
+          "id": "leyline_003",
+          "nodes": [
+            "node_003",
+            "node_009"
+          ],
+          "category": "primary"
+        },
+        {
+          "id": "leyline_004",
+          "nodes": [
+            "node_004",
+            "node_010"
+          ],
+          "category": "primary"
+        },
+        {
+          "id": "leyline_005",
+          "nodes": [
+            "node_008",
+            "node_011"
+          ],
+          "category": "primary"
+        }
+      ],
+      "metadata": {
+        "original_max_distance": 5000.0,
+        "suggested_parameters": {
+          "min_distance": 3719.2759182575996,
+          "max_distance": 18258.966522213745,
+          "median_distance": 12172.644348142496,
+          "message": "Suggested parameters based on node distribution:\nMinimum distance: 3719.28 km\nMaximum distance: 18258.97 km\nMedian distance: 12172.64 km"
+        },
+        "adjustments_made": [],
+        "connection_stats": {
+          "attempted": 66,
+          "successful": 6
+        },
+        "parameter_adjustments": {
+          "original_max_distance": 5000.0,
+          "suggested_max_distance": 18258.966522213745,
+          "suggested_min_distance": 3719.2759182575996,
+          "auto_adjust_enabled": true,
+          "final_max_distance": 5000.0
+        }
+      }
+    },
+    "validation": {
+      "nodes_valid": true,
+      "nodes_message": "Node positions are valid.",
+      "connections_valid": true,
+      "connections_message": "All 6 connections are within maximum distance.",
+      "parameter_suggestions": {
+        "min_distance": 3719.2759182575996,
+        "max_distance": 18258.966522213745,
+        "median_distance": 12172.644348142496,
+        "message": "Suggested parameters based on node distribution:\nMinimum distance: 3719.28 km\nMaximum distance: 18258.97 km\nMedian distance: 12172.64 km"
+      }
+    },
+    "statistics": {
+      "total_nodes": 12,
+      "total_ley_lines": 6,
+      "primary_ley_lines": 6
+    }
+  },
+  {
+    "configuration": {
+      "solid_type": "icosahedron",
+      "radius": 6371.0,
+      "max_distance": 5000.0,
+      "auto_adjust_enabled": true
+    },
+    "data": {
+      "nodes": [
+        {
+          "id": "node_000",
+          "coordinates": {
+            "latitude": -58.28252558853901,
+            "longitude": -90.0
+          },
+          "category": "major_node",
+          "associated_ley_lines": [],
+          "nearby_nodes": []
+        },
+        {
+          "id": "node_001",
+          "coordinates": {
+            "latitude": 0.0,
+            "longitude": -121.717474411461
+          },
+          "category": "major_node",
+          "associated_ley_lines": [],
+          "nearby_nodes": []
+        },
+        {
+          "id": "node_002",
+          "coordinates": {
+            "latitude": -31.717474411461005,
+            "longitude": 180.0
+          },
+          "category": "major_node",
+          "associated_ley_lines": [],
+          "nearby_nodes": []
+        },
+        {
+          "id": "node_003",
+          "coordinates": {
+            "latitude": 58.28252558853901,
+            "longitude": -90.0
+          },
+          "category": "major_node",
+          "associated_ley_lines": [],
+          "nearby_nodes": []
+        },
+        {
+          "id": "node_004",
+          "coordinates": {
+            "latitude": 0.0,
+            "longitude": 121.717474411461
+          },
+          "category": "major_node",
+          "associated_ley_lines": [],
+          "nearby_nodes": []
+        },
+        {
+          "id": "node_005",
+          "coordinates": {
+            "latitude": 31.717474411461005,
+            "longitude": 180.0
+          },
+          "category": "major_node",
+          "associated_ley_lines": [],
+          "nearby_nodes": []
+        },
+        {
+          "id": "node_006",
+          "coordinates": {
+            "latitude": -58.28252558853901,
+            "longitude": 90.0
+          },
+          "category": "major_node",
+          "associated_ley_lines": [],
+          "nearby_nodes": []
+        },
+        {
+          "id": "node_007",
+          "coordinates": {
+            "latitude": 0.0,
+            "longitude": -58.282525588538995
+          },
+          "category": "major_node",
+          "associated_ley_lines": [],
+          "nearby_nodes": []
+        },
+        {
+          "id": "node_008",
+          "coordinates": {
+            "latitude": -31.717474411461005,
+            "longitude": 0.0
+          },
+          "category": "major_node",
+          "associated_ley_lines": [],
+          "nearby_nodes": []
+        },
+        {
+          "id": "node_009",
+          "coordinates": {
+            "latitude": 58.28252558853901,
+            "longitude": 90.0
+          },
+          "category": "major_node",
+          "associated_ley_lines": [],
+          "nearby_nodes": []
+        },
+        {
+          "id": "node_010",
+          "coordinates": {
+            "latitude": 0.0,
+            "longitude": 58.282525588538995
+          },
+          "category": "major_node",
+          "associated_ley_lines": [],
+          "nearby_nodes": []
+        },
+        {
+          "id": "node_011",
+          "coordinates": {
+            "latitude": 31.717474411461005,
+            "longitude": 0.0
+          },
+          "category": "major_node",
+          "associated_ley_lines": [],
+          "nearby_nodes": []
+        }
+      ],
+      "ley_lines": [],
+      "metadata": {
+        "original_max_distance": 5000.0,
+        "suggested_parameters": {
+          "min_distance": 5642.915584852919,
+          "max_distance": 19442.16347243163,
+          "median_distance": 12961.442314954422,
+          "message": "Suggested parameters based on node distribution:\nMinimum distance: 5642.92 km\nMaximum distance: 19442.16 km\nMedian distance: 12961.44 km"
+        },
+        "adjustments_made": [],
+        "connection_stats": {
+          "attempted": 66,
+          "successful": 0
+        },
+        "parameter_adjustments": {
+          "original_max_distance": 5000.0,
+          "suggested_max_distance": 19442.16347243163,
+          "suggested_min_distance": 5642.915584852919,
+          "auto_adjust_enabled": true,
+          "final_max_distance": 5000.0
+        }
+      }
+    },
+    "validation": {
+      "nodes_valid": true,
+      "nodes_message": "Node positions are valid.",
+      "connections_valid": true,
+      "connections_message": "All 0 connections are within maximum distance.",
+      "parameter_suggestions": {
+        "min_distance": 5642.915584852919,
+        "max_distance": 19442.16347243163,
+        "median_distance": 12961.442314954422,
+        "message": "Suggested parameters based on node distribution:\nMinimum distance: 5642.92 km\nMaximum distance: 19442.16 km\nMedian distance: 12961.44 km"
+      }
+    },
+    "statistics": {
+      "total_nodes": 12,
+      "total_ley_lines": 0,
+      "primary_ley_lines": 0
+    }
+  }
+]

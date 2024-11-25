@@ -1,0 +1,237 @@
+import math
+import json
+import logging
+import numpy as np
+import os
+
+# Configure logging with a default level and allow external configuration
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+def generate_platonic_solid(solid_type: str = 'icosahedron', radius: float = 6371) -> list:
+    """
+    Generate nodes based on Platonic solids mapped onto a sphere.
+
+    Args:
+        solid_type (str): Type of Platonic solid. Options are 'tetrahedron', 'cube',
+                          'octahedron', 'dodecahedron', 'icosahedron'.
+        radius (float): Radius of the sphere in kilometers.
+
+    Returns:
+        list: List of node dictionaries with coordinates and metadata.
+
+    Raises:
+        ValueError: If an unsupported solid_type is provided or radius is non-positive.
+    """
+    logging.info(f"Generating nodes for a {solid_type} mapped onto a sphere with radius {radius} km.")
+
+    # Validate inputs
+    if radius <= 0:
+        raise ValueError("Radius must be a positive number.")
+
+    # Define the vertices for each Platonic solid
+    if solid_type == 'tetrahedron':
+        # Tetrahedron vertices
+        points = np.array([
+            [1, 1, 1],
+            [-1, -1, 1],
+            [-1, 1, -1],
+            [1, -1, -1]
+        ])
+    elif solid_type == 'cube':
+        # Cube vertices
+        points = np.array([
+            [1, 1, 1],
+            [1, 1, -1],
+            [1, -1, 1],
+            [1, -1, -1],
+            [-1, 1, 1],
+            [-1, 1, -1],
+            [-1, -1, 1],
+            [-1, -1, -1]
+        ])
+    elif solid_type == 'octahedron':
+        # Octahedron vertices
+        points = np.array([
+            [1, 0, 0],
+            [-1, 0, 0],
+            [0, 1, 0],
+            [0, -1, 0],
+            [0, 0, 1],
+            [0, 0, -1]
+        ])
+    elif solid_type == 'dodecahedron':
+        # Dodecahedron vertices
+        phi = (1 + np.sqrt(5)) / 2  # Golden ratio
+        points = []
+        for i in [-1, 1]:
+            for j in [-1, 1]:
+                points.extend([
+                    [0, i/phi, j*phi],
+                    [i/phi, j*phi, 0],
+                    [i*phi, 0, j/phi]
+                ])
+        points = np.array(points)
+    elif solid_type == 'icosahedron':
+        # Icosahedron vertices
+        phi = (1 + np.sqrt(5)) / 2  # Golden ratio
+        points = []
+        for i in [-1, 1]:
+            for j in [-1, 1]:
+                points.append([0, i, j * phi])
+                points.append([i, j * phi, 0])
+                points.append([i * phi, 0, j])
+        points = np.array(points)
+    else:
+        raise ValueError(f"Unsupported solid_type '{solid_type}'. Supported types are 'tetrahedron', 'cube', 'octahedron', 'dodecahedron', 'icosahedron'.")
+
+    # Normalize and scale points to the sphere
+    norms = np.linalg.norm(points, axis=1)
+    points = points / norms[:, np.newaxis]  # Normalize vectors
+    points *= radius  # Scale to the sphere radius
+
+    # Convert to spherical coordinates
+    nodes = []
+    for idx, (x, y, z) in enumerate(points):
+        latitude = math.degrees(math.asin(z / radius))
+        longitude = math.degrees(math.atan2(y, x))
+        node = {
+            "id": f"node_{idx:03}",
+            "coordinates": {"latitude": latitude, "longitude": longitude},
+            "category": "major_node",
+            "associated_ley_lines": [],
+            "nearby_nodes": []
+        }
+        nodes.append(node)
+    logging.info(f"Generated {len(nodes)} nodes for solid {solid_type}.")
+    return nodes
+
+def connect_nodes(nodes: list, radius: float, max_distance: float) -> list:
+    """
+    Connect nodes within a certain distance to create ley lines.
+
+    Args:
+        nodes (list): List of node dictionaries.
+        radius (float): Radius of the sphere in kilometers.
+        max_distance (float): Maximum distance between nodes to create a ley line.
+
+    Returns:
+        list: List of ley line dictionaries with metadata.
+
+    Raises:
+        ValueError: If max_distance is non-positive.
+    """
+    logging.info(f"Connecting nodes within {max_distance} km to create ley lines.")
+
+    if max_distance <= 0:
+        raise ValueError("Max distance must be a positive number.")
+
+    ley_lines = []
+    ley_line_id = 0
+    num_nodes = len(nodes)
+    for i in range(num_nodes):
+        node_a = nodes[i]
+        for j in range(i + 1, num_nodes):
+            node_b = nodes[j]
+
+            # Calculate distance between nodes using the haversine formula
+            lat1 = math.radians(node_a['coordinates']['latitude'])
+            lon1 = math.radians(node_a['coordinates']['longitude'])
+            lat2 = math.radians(node_b['coordinates']['latitude'])
+            lon2 = math.radians(node_b['coordinates']['longitude'])
+            dlat = lat2 - lat1
+            dlon = lon2 - lon1
+
+            a = math.sin(dlat/2)**2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon/2)**2
+            c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+            distance = radius * c
+
+            if distance <= max_distance:
+                ley_line = {
+                    "id": f"leyline_{ley_line_id:03}",
+                    "nodes": [node_a['id'], node_b['id']],
+                    "category": "primary" if node_a['category'] == "major_node" and node_b['category'] == "major_node" else "secondary"
+                }
+                ley_lines.append(ley_line)
+                ley_line_id += 1
+                node_a['associated_ley_lines'].append(ley_line['id'])
+                node_b['associated_ley_lines'].append(ley_line['id'])
+                if node_b['id'] not in node_a['nearby_nodes']:
+                    node_a['nearby_nodes'].append(node_b['id'])
+                if node_a['id'] not in node_b['nearby_nodes']:
+                    node_b['nearby_nodes'].append(node_a['id'])
+    logging.info(f"Generated {len(ley_lines)} ley lines.")
+    return ley_lines
+
+def generate_nodes_and_ley_lines(
+    solid_type: str = 'icosahedron',
+    radius: float = 6371,
+    max_distance: float = 5000
+) -> dict:
+    """
+    Generate nodes and ley lines based on a Platonic solid mapping.
+
+    Args:
+        solid_type (str): Type of Platonic solid. Options are 'tetrahedron', 'cube',
+                          'octahedron', 'dodecahedron', 'icosahedron'.
+        radius (float): Radius of the sphere in kilometers.
+        max_distance (float): Maximum distance between nodes to create ley lines.
+
+    Returns:
+        dict: Dictionary containing nodes and ley lines.
+
+    Raises:
+        ValueError: If inputs are invalid.
+    """
+    # Validate inputs
+    valid_solids = ['tetrahedron', 'cube', 'octahedron', 'dodecahedron', 'icosahedron']
+    if solid_type not in valid_solids:
+        raise ValueError(f"Invalid solid_type '{solid_type}'. Must be one of {valid_solids}.")
+    if radius <= 0:
+        raise ValueError("Radius must be a positive number.")
+    if max_distance <= 0:
+        raise ValueError("Max distance must be a positive number.")
+
+    try:
+        nodes = generate_platonic_solid(solid_type, radius)
+        ley_lines = connect_nodes(nodes, radius, max_distance)
+        data = {"nodes": nodes, "ley_lines": ley_lines}
+        return data
+    except Exception as e:
+        logging.exception("An error occurred during node and ley line generation.")
+        raise
+
+def save_to_file(data: dict, output_file: str):
+    """
+    Save data to a JSON file atomically to prevent data corruption.
+
+    Args:
+        data (dict): Data to be saved.
+        output_file (str): Path to the output JSON file.
+
+    Raises:
+        IOError: If the file cannot be written.
+    """
+    temp_file = output_file + '.tmp'
+    try:
+        with open(temp_file, "w") as file:
+            json.dump(data, file, indent=4)
+        os.replace(temp_file, output_file)
+        logging.info(f"JSON data saved to {output_file}.")
+    except Exception as e:
+        logging.exception(f"Failed to save JSON data to {output_file}.")
+        if os.path.exists(temp_file):
+            os.remove(temp_file)
+        raise
+
+# Example usage
+if __name__ == "__main__":
+    try:
+        # Generate multiple ley line configurations
+        solids = ['tetrahedron', 'cube', 'octahedron', 'dodecahedron', 'icosahedron']
+        for solid in solids:
+            output_file = f"ley_lines_{solid}.json"
+            data = generate_nodes_and_ley_lines(solid_type=solid, radius=6371, max_distance=5000)
+            save_to_file(data, output_file)
+        logging.info("Ley line generation completed successfully for all solids.")
+    except Exception as error:
+        logging.exception("An unexpected error occurred in the main execution.")

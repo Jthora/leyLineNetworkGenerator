@@ -1,0 +1,165 @@
+Configuration Results - tetrahedron
+
+Original Parameters
+
+Max Distance: 5000.00 km
+
+Auto-adjust: Enabled
+
+Suggested Parameters
+
+Min Distance: 9738.12 km
+
+Max Distance: 18258.97 km
+
+Validation Results
+
+Node Validation
+Passed
+Node positions are valid.
+
+Connection Validation
+Passed
+All 0 connections are within maximum distance.
+
+Connection Statistics
+
+Connection Success Rate
+0.0%
+0/6 connections
+
+Network Density
+0/4 nodes
+Average: 0.0 lines per node
+Configuration Results - octahedron
+
+Original Parameters
+
+Max Distance: 5000.00 km
+
+Auto-adjust: Enabled
+
+Suggested Parameters
+
+Min Distance: 8006.03 km
+
+Max Distance: 15011.32 km
+
+Validation Results
+
+Node Validation
+Passed
+Node positions are valid.
+
+Connection Validation
+Passed
+All 0 connections are within maximum distance.
+
+Connection Statistics
+
+Connection Success Rate
+0.0%
+0/15 connections
+
+Network Density
+0/6 nodes
+Average: 0.0 lines per node
+Configuration Results - cube
+
+Original Parameters
+
+Max Distance: 5000.00 km
+
+Auto-adjust: Enabled
+
+Suggested Parameters
+
+Min Distance: 6273.95 km
+
+Max Distance: 18258.97 km
+
+Validation Results
+
+Node Validation
+Passed
+Node positions are valid.
+
+Connection Validation
+Passed
+All 0 connections are within maximum distance.
+
+Connection Statistics
+
+Connection Success Rate
+0.0%
+0/28 connections
+
+Network Density
+0/8 nodes
+Average: 0.0 lines per node
+Configuration Results - dodecahedron
+
+Original Parameters
+
+Max Distance: 5000.00 km
+
+Auto-adjust: Enabled
+
+Suggested Parameters
+
+Min Distance: 3719.28 km
+
+Max Distance: 18258.97 km
+
+Validation Results
+
+Node Validation
+Passed
+Node positions are valid.
+
+Connection Validation
+Passed
+All 6 connections are within maximum distance.
+
+Connection Statistics
+
+Connection Success Rate
+9.1%
+6/66 connections
+
+Network Density
+6/12 nodes
+Average: 0.5 lines per node
+Configuration Results - icosahedron
+
+Original Parameters
+
+Max Distance: 5000.00 km
+
+Auto-adjust: Enabled
+
+Suggested Parameters
+
+Min Distance: 5642.92 km
+
+Max Distance: 19442.16 km
+
+Validation Results
+
+Node Validation
+Passed
+Node positions are valid.
+
+Connection Validation
+Passed
+All 0 connections are within maximum distance.
+
+Connection Statistics
+
+Connection Success Rate
+0.0%
+0/66 connections
+
+Network Density
+0/12 nodes
+Average: 0.0 lines per node

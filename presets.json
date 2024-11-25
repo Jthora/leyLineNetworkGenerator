@@ -1,0 +1,17 @@
+{
+    "Earth-scale Network": {
+        "solid_type": "icosahedron",
+        "radius": 6371,
+        "max_distance": 5000
+    },
+    "Compact Network": {
+        "solid_type": "octahedron",
+        "radius": 1000,
+        "max_distance": 800
+    },
+    "Dense Network": {
+        "solid_type": "dodecahedron",
+        "radius": 2000,
+        "max_distance": 2000
+    }
+}

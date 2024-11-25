@@ -1,0 +1,6 @@
+﻿,Solid Type,Radius (km),Max Distance (km),Nodes,Ley Lines,Primary Lines
+0,tetrahedron,6371,5000,4,0,0
+1,cube,6371,5000,8,0,0
+2,octahedron,6371,5000,6,0,0
+3,dodecahedron,6371,5000,12,6,6
+4,icosahedron,6371,5000,12,0,0
