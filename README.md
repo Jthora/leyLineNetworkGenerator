@@ -2,7 +2,7 @@
 
 A development tool for generating and visualizing ley line networks, featuring a Streamlit-based user interface with interactive 3D visualization powered by Plotly. The application provides network parameter controls, statistical analysis, and preset management functionality for saving and loading network configurations.
 
-![Banner](banner.png)
+![Banner](LeyLineNodeGenerator-Screenshot1.jpg)
 
 ## Features
 
